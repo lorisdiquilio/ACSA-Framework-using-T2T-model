@@ -1,0 +1,666 @@
+[
+    {
+        "text": "since it literally is a complete hole in the wall, it's a bit intimidating at first, but you get over that very quickly as soon as the friendly staff welcomes you - don't hesitate to ask for help with what to get.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "service"
+            },
+            {
+                "polarity": "negative",
+                "category": "ambience"
+            }
+        ]
+    },
+    {
+        "text": "the restaurant itself is not large, but seems to have several round tables to accommodate large groups hoping to save a buck to eat authentic taiwanese.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "ambience"
+            },
+            {
+                "polarity": "positive",
+                "category": "price"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "wait staff is blatantly unappreciative of your business but its the best pie on the uws!",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "having discovered ping's on the internet, we entered with qualms but were instantly put to ease by the fish tanks that greet you as u walk in.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "positive",
+                "category": "ambience"
+            }
+        ]
+    },
+    {
+        "text": "the food is so good and so popular that waiting can really be a nightmare.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "overall the food quality was pretty good, though i hear the salmon is much better when it hasn't sat cooling in front of the guest.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "the menu is prix fixe, so be prepared to spend at least $60 per person, but it is well worth it superb food.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "price"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "the service is great (maybe even borderline nagging but at least you get attention), the desserts are excellent and the coffee is so very good...",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "service"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "would have rather tried terrace in the sky or water club for that price",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "negative",
+                "category": "price"
+            }
+        ]
+    },
+    {
+        "text": "a bit breezy up there on the mezzanine from the wind coming from the tracks.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "negative",
+                "category": "ambience"
+            }
+        ]
+    },
+    {
+        "text": "the place has a nice fit-out, some attractive furnishings and, from what i could tell, a reasonable wine list (i was given the food menu when i asked for the carte des vins)",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "ambience"
+            },
+            {
+                "polarity": "positive",
+                "category": "drinks"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "overall a oh ya even though there is waiting it is deff worth it",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "i would recommend roxy's for that, but not for their food.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "food"
+            },
+            {
+                "polarity": "positive",
+                "category": "anecdotes/miscellaneous"
+            }
+        ]
+    },
+    {
+        "text": "everything was going good until we got our meals.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "restaurant"
+            },
+            {
+                "polarity": "negative",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "i have it a 4 instead of 5 because of the price (just chicken tikka masala - no bread of rice - is $25), which i would expect at a upscale indian restaurant but this place doesn't have an upscale feel.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "restaurant"
+            },
+            {
+                "polarity": "negative",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "ambience"
+            }
+        ]
+    },
+    {
+        "text": "while we thoroughly enjoyed the food, it was annoying to scream across the table for conversation.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "ambience"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "food was good not great not worth the wait or another visit",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "not what i would expect for the price and prestige of this location.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "service"
+            },
+            {
+                "polarity": "neutral",
+                "category": "restaurant"
+            }
+        ]
+    },
+    {
+        "text": "downtown dinner 2002 - prixe fix: appetizers were ok, waiter gave me poor suggestion..try the potato stuff kanish best one.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "it's a great little place with tons of potential to be a neighborhood joint if the service weren't so impersonal and corporate-like.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "restaurant"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "our waiter was fine, the place looks nice in that not-trying-too-hard way, but at those prices, a little more should be expected of your food.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "service"
+            },
+            {
+                "polarity": "positive",
+                "category": "ambience"
+            },
+            {
+                "polarity": "negative",
+                "category": "price"
+            },
+            {
+                "polarity": "negative",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "this little place definitely exceeded my expectations and you sure get a lot of food for your money.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "price"
+            },
+            {
+                "polarity": "neutral",
+                "category": "ambience"
+            }
+        ]
+    },
+    {
+        "text": "the food was mediocre and the service was severely slow.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "so what you really end up paying for is the restaurant not the food.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "restaurant"
+            },
+            {
+                "polarity": "neutral",
+                "category": "ambience"
+            },
+            {
+                "polarity": "negative",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "the people with carts of food don't understand you because they don't speak english, their job is to give you the delicious food you point at.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "yes, the place is classy and beautiful, but they most certainly target the uber whealthy not the common joe that wants to go all out every once in a while.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "ambience"
+            },
+            {
+                "polarity": "negative",
+                "category": "restaurant"
+            }
+        ]
+    },
+    {
+        "text": "we ran a little late for the reservation but it wasn't a problem to get our table immediately.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "positive",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "we ordered a glass of wine and were finished eating and paying before the wine came.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "service"
+            },
+            {
+                "polarity": "neutral",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "20 minutes for our reservation but it gave us time to have a few cocktails and enjoy our surroundings and each other.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "positive",
+                "category": "ambience"
+            },
+            {
+                "polarity": "neutral",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "the food is expensive, but worth every bite.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "price"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "try the spicy shrimp appetizer (again, not the greatest value in the world but worth the price) and the lamb vindaloo is great.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "neutral",
+                "category": "price"
+            }
+        ]
+    },
+    {
+        "text": "the food itself was just ok - nothing spectacular - but the service was awful.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "the italian food has flavor (that can be sort of surprising on the ues), and the service turns from a nightmare to attentive,they sort of remind me of the ny yankees of the late 90's, no matter how bad it look, you knew that there was a rally just around the corner.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "neutral",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "the food here is rather good, but only if you like to wait for it.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "while i could have done without the youth who shared the evening with us, our wonderful server and food made the experience a very positive one.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "service"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "restaurant"
+            }
+        ]
+    },
+    {
+        "text": "the decor however seems to be the distraction so you won't notice that you just payed 300 bucks for some cold eggplant that took 2 frickin hours to come!!!!",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "ambience"
+            },
+            {
+                "polarity": "negative",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "when we left at 8:00 pm, it was packed and noisy.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "negative",
+                "category": "ambience"
+            }
+        ]
+    },
+    {
+        "text": "the place is small and cramped but the food is fantastic.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "ambience"
+            }
+        ]
+    },
+    {
+        "text": "a nice space, as long as it doesn't get too crowded and a singleminded devotion to its chosen cuisine make mare a great choice for seafood lovers.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "ambience"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "fabulous food - if the front of house staff don't put you off –",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "still, any quibbles about the bill were off-set by the pour-your-own measures of liqueurs which were courtesy of the house...",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "restaurant"
+            },
+            {
+                "polarity": "positive",
+                "category": "drinks"
+            }
+        ]
+    },
+    {
+        "text": "if you're craving for haru's great food, especially the house roll, but can't stand the wait building outside, head across the street to their sake bar!",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "negative",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "also, if you don't want to sit at a certain table, you don't have to!",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "positive",
+                "category": "service"
+            }
+        ]
+    },
+    {
+        "text": "though it's been crowded most times i've gone here, bark always delivers on their food.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "neutral",
+                "category": "restaurant"
+            }
+        ]
+    },
+    {
+        "text": "the food can get pricey but the prixe fixe tasting menu is the greatest food for a good price and they cater the food to any food allergies or food you don't like.",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "food"
+            },
+            {
+                "polarity": "neutral",
+                "category": "price"
+            }
+        ]
+    },
+    {
+        "text": "two complaints- their appetizer selection stinks, it would be nice to get some mozzarella sticks on the menu.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "food"
+            },
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            }
+        ]
+    },
+    {
+        "text": "lived in shanghai most of my life and thought the food was comparable to the flagship green bo restaurant there.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "anecdotes/miscellaneous"
+            },
+            {
+                "polarity": "positive",
+                "category": "food"
+            }
+        ]
+    },
+    {
+        "text": "what you are paying for is the environment and the name.",
+        "labels": [
+            {
+                "polarity": "neutral",
+                "category": "ambience"
+            },
+            {
+                "polarity": "negative",
+                "category": "restaurant"
+            }
+        ]
+    }
+]

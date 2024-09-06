@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annotazione Semi-automatica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+    function addAnnotation(index) {
+        const container = document.getElementById(`annotations_${index}`);
+        const annotationDiv = document.createElement('div');
+        const annotationIndex = container.childElementCount;
+
+        annotationDiv.innerHTML = `
+            <div id="annotation_${index}_${annotationIndex}">
+                <label for="polarity_${index}_${annotationIndex}">Polarity:</label>
+                <select name="polarity_${index}_${annotationIndex}">
+                    <option value="">Seleziona</option>
+                    <option value="Positive">Positive</option>
+                    <option value="Negative">Negative</option>
+                    <option value="Neutral">Neutral</option>
+                </select>
+                <label for="category_${index}_${annotationIndex}">Category:</label>
+                <select name="category_${index}_${annotationIndex}">
+                    <option value="">Seleziona</option>
+                    <option value="GENERAL#SATISFACTION-DESIGN">GENERAL#SATISFACTION-DESIGN</option>
+                    <option value="GENERAL#PORTABILITY">GENERAL#PORTABILITY</option>
+                    <option value="GENERAL#USABILITY">GENERAL#USABILITY</option>
+                    <option value="GENERAL#DOSAGE">GENERAL#DOSAGE</option>
+                    <option value="GENERAL#SIZE">GENERAL#SIZE</option>
+                    <option value="GENERAL#SUSTAINABILITY">GENERAL#SUSTAINABILITY</option>
+                    <option value="INTEGRITY#BROKEN">INTEGRITY#BROKEN</option>
+                    <option value="INTEGRITY#LEAKAGE">INTEGRITY#LEAKAGE</option>
+                    <option value="INTEGRITY#E-COMMERCER_READINESS">INTEGRITY#E-COMMERCER_READINESS</option>
+                    <option value="INTEGRITY#CLEANLINESS">INTEGRITY#CLEANLINESS</option>
+                    <option value="TECHNICAL#SUCTION_ABILITY">TECHNICAL#SUCTION_ABILITY</option>
+                    <option value="TECHNICAL#STROKES_TO_PRIME">TECHNICAL#STROKES_TO_PRIME</option>
+                    <option value="TECHNICAL#FORCE_TO_ACTUATE">TECHNICAL#FORCE_TO_ACTUATE</option>
+                    <option value="OTHERS">OTHERS</option>
+                </select>
+                <input type="text" name="custom_category_${index}_${annotationIndex}">
+                <button type="button" onclick="removeAnnotation(${index}, ${annotationIndex})">Rimuovi</button>
+                <br>
+            </div>
+        `;
+        container.appendChild(annotationDiv);
+    }
+
+        function removeAnnotation(index, annotationIndex) {
+            const annotationDiv = document.getElementById(`annotation_${index}_${annotationIndex}`);
+            annotationDiv.remove();
+        }
+
+        function populateInitialAnnotations(predictions) {
+            predictions.forEach((prediction, index) => {
+                const polaritySelect = document.querySelector(`select[name="polarity_${index}_0"]`);
+                const categorySelect = document.querySelector(`select[name="category_${index}_0"]`);
+                const customCategoryInput = document.querySelector(`input[name="custom_category_${index}_0"]`);
+
+                if (prediction.predictions.length > 0) {
+                    const firstPrediction = prediction.predictions[0];
+
+                    // Popola il campo di polarità
+                    if (firstPrediction.polarity) {
+                        Array.from(polaritySelect.options).forEach(option => {
+                            if (option.value === firstPrediction.polarity) {
+                                option.selected = true;
+                            }
+                        });
+                    }
+
+                    // Popola il campo di categoria
+                    if (firstPrediction.category) {
+                        Array.from(categorySelect.options).forEach(option => {
+                            if (option.value === firstPrediction.category) {
+                                option.selected = true;
+                            }
+                        });
+
+                        // Se la categoria non è nelle opzioni, imposto il campo di testo personalizzato
+                        if (!Array.from(categorySelect.options).some(option => option.value === firstPrediction.category)) {
+                            customCategoryInput.value = firstPrediction.category;
+                        }
+                    }
+                }
+            });
+        }
+
+        function fetchPredictions() {
+            fetch('/get_predictions', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(predictions => {
+                populateInitialAnnotations(predictions);
+            })
+            .catch(error => console.error('Errore durante il recupero delle previsioni:', error));
+        }
+
+        // Chiamata per ottenere le previsioni all'avvio della pagina
+        window.onload = function() {
+            fetchPredictions();
+        };
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Annotazione Semi-automatica</h1>
+        
+        <form method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Recensione</th>
+                        <th>Testo</th>
+                        <th>Polarità</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for review in reviews %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ review.text }}</td>
+                        <td>
+                            <select name="polarity_{{ loop.index0 }}_0">
+                                <option value="">Seleziona</option>
+                                <option value="Positive">Positive</option>
+                                <option value="Negative">Negative</option>
+                                <option value="Neutral">Neutral</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="category_{{ loop.index0 }}_0">
+                                <option value="">Seleziona</option>
+                                <option value="GENERAL#SATISFACTION-DESIGN">GENERAL#SATISFACTION-DESIGN</option>
+                                <option value="GENERAL#PORTABILITY">GENERAL#PORTABILITY</option>
+                                <option value="GENERAL#USABILITY">GENERAL#USABILITY</option>
+                                <option value="GENERAL#DOSAGE">GENERAL#DOSAGE</option>
+                                <option value="GENERAL#SIZE">GENERAL#SIZE</option>
+                                <option value="GENERAL#SUSTAINABILITY">GENERAL#SUSTAINABILITY</option>
+                                <option value="INTEGRITY#BROKEN">INTEGRITY#BROKEN</option>
+                                <option value="INTEGRITY#LEAKAGE">INTEGRITY#LEAKAGE</option>
+                                <option value="INTEGRITY#E-COMMERCER_READINESS">INTEGRITY#E-COMMERCER_READINESS</option>
+                                <option value="INTEGRITY#CLEANLINESS">INTEGRITY#CLEANLINESS</option>
+                                <option value="TECHNICAL#SUCTION_ABILITY">TECHNICAL#SUCTION_ABILITY</option>
+                                <option value="TECHNICAL#STROKES_TO_PRIME">TECHNICAL#STROKES_TO_PRIME</option>
+                                <option value="TECHNICAL#FORCE_TO_ACTUATE">TECHNICAL#FORCE_TO_ACTUATE</option>
+                                <option value="OTHERS">OTHERS</option>
+                                <!-- Opzioni della categoria verranno popolate dinamicamente -->
+                            </select>
+                            <input type="text" name="custom_category_{{ loop.index0 }}_0" placeholder="Altro">
+                        </td>
+                    </tr>
+                    <!-- Aggiungi iterazioni per le annotazioni aggiuntive -->
+                    <tr>
+                        <td colspan="4">
+                            <div id="annotations_{{ loop.index0 }}">
+                                <!-- Inserisci qui le annotazioni aggiuntive -->
+                            </div>
+                            <button type="button" onclick="addAnnotation({{ loop.index0 }})">Aggiungi Annotazione</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <input type="submit" value="Salva Annotazioni">
+        </form>
+        
+    </div>
+</body>
+</html>

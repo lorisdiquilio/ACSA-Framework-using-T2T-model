@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load reviews and annotations</title>
+</head>
+<body>
+    <h1>Load reviews file and annotations (if you have)</h1>
+    <form method="POST" enctype="multipart/form-data" action="/upload">
+        <label for="excel_file">Load Excel with reviews:</label>
+        <input type="file" name="excel_file" id="excel_file">
+        <br>
+        <label for="json_file">Load json with annotations (optional):</label>
+        <input type="file" name="json_file" id="json_file">
+        <br>
+        <input type="submit" value="Load">
+    </form>
+</body>
+</html>

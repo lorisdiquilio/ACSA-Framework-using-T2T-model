@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Annotate the reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .review-container {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .review-text {
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .annotations {
+            margin-bottom: 10px;
+        }
+
+        .annotation {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .annotation label {
+            margin-right: 5px;
+        }
+
+        .annotation select, .annotation input {
+            margin-right: 10px;
+        }
+
+        .annotation button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .annotation button:hover {
+            background-color: #e60000;
+        }
+
+        .add-annotation-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .add-annotation-btn:hover {
+            background-color: #45a049;
+        }
+
+        .submit-btn {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #007bb5;
+        }
+    </style>
+    <script>
+        function addAnnotation(index) {
+            const container = document.getElementById(`annotations_${index}`);
+            const annotationDiv = document.createElement('div');
+            annotationDiv.className = 'annotation';
+            const annotationIndex = container.childElementCount;
+
+            annotationDiv.innerHTML = `
+                <div id="annotation_${index}_${annotationIndex}">
+                    <label for="polarity_${index}_${annotationIndex}">Polarity:</label>
+                    <select name="polarity_${index}_${annotationIndex}">
+                        <option value="">Select</option>
+                        <option value="Positive">Positive</option>
+                        <option value="Negative">Negative</option>
+                        <option value="Neutral">Neutral</option>
+                        <option value="Conflict">Conflict</option>
+                    </select>
+                    <label for="category_${index}_${annotationIndex}">Category:</label>
+                    <select name="category_${index}_${annotationIndex}">
+                        <option value="">Select</option>
+                        <option value="Skin/Hair Issue">Skin/Hair Issue</option>
+                        <option value="Overall Satisfaction">Overall Satisfaction</option>
+                        <option value="Texture/Thickness">Texture/Thickness</option>
+                        <option value="Tone/Color">Tone/Color</option>
+                        <option value="Results">Results</option>
+                        <option value="General feel/effect">General feel/effect</option>
+                        <option value="Price/Value">Price/Value</option>
+                        <option value="Packaging">Packaging</option>
+                        <option value="Smell">Smell</option>
+                        <option value="Recommendation">Recommendation</option>
+                        <option value="Suitability">Suitability</option>
+                        <option value="Absorption">Absorption</option>
+                        <option value="Delivery/Customer Service">Delivery/Customer Service</option>
+                        <option value="Easy to use">Easy to use</option>
+                        <option value="Ingredients">Ingredients</option>
+                        <option value="Durability">Durability</option>
+                        <option value="Sustainability">Sustainability</option>
+                        <option value="Quantity">Quantity</option>
+                        <option value="Portability">Portability</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <input type="text" name="custom_category_${index}_${annotationIndex}" placeholder="Others">
+                    <button type="button" onclick="removeAnnotation(${index}, ${annotationIndex})">Remove</button>
+                </div>
+            `;
+            container.appendChild(annotationDiv);
+        }
+
+        function removeAnnotation(index, annotationIndex) {
+            const annotationDiv = document.getElementById(`annotation_${index}_${annotationIndex}`);
+            annotationDiv.remove();
+        }
+    </script>
+</head>
+<body>
+    <h1>Annotate reviews</h1>
+    <form method="POST">
+        {% for review in reviews %}
+            <div class="review-container">
+                <p class="review-text">{{ review['text'] }}</p>
+                <div id="annotations_{{ loop.index0 }}" class="annotations">
+                    <div id="annotation_{{ loop.index0 }}_0" class="annotation">
+                        <label for="polarity_{{ loop.index0 }}_0">Polarity:</label>
+                        <select name="polarity_{{ loop.index0 }}_0">
+                            <option value="">Select</option>
+                            <option value="Positive">Positive</option>
+                            <option value="Negative">Negative</option>
+                            <option value="Neutral">Neutral</option>
+                            <option value="Conflict">Conflict</option>
+                        </select>
+                        <label for="category_{{ loop.index0 }}_0">Category:</label>
+                        <select name="category_{{ loop.index0 }}_0">
+                            <option value="">Select</option>
+                            <option value="Skin/Hair Issue">Skin/Hair Issue</option>
+                            <option value="Overall Satisfaction">Overall Satisfaction</option>
+                            <option value="Texture/Thickness">Texture/Thickness"</option>
+                            <option value="Tone/Color">Tone/Color</option>
+                            <option value="Results">Results</option>
+                            <option value="General feel/effect">General feel/effect</option>
+                            <option value="Price/Value">Price/Value</option>
+                            <option value="Packaging">Packaging</option>
+                            <option value="Smell">Smell</option>
+                            <option value="Recommendation">Recommendation</option>
+                            <option value="Suitability">Suitability</option>
+                            <option value="Absorption">Absorption</option>
+                            <option value="Delivery/Customer Service">Delivery/Customer Service</option>
+                            <option value="Easy to use">Easy to use</option>
+                            <option value="Ingredients">Ingredients</option>
+                            <option value="Durability">Durability</option>
+                            <option value="Sustainability">Sustainability</option>
+                            <option value="Quantity">Quantity</option>
+                            <option value="Portability">Portability</option>
+                            <option value="Others">Others</option>
+                        </select>
+                        <input type="text" name="custom_category_{{ loop.index0 }}_0" placeholder="Other category">
+                        <button type="button" onclick="removeAnnotation({{ loop.index0 }}, 0)">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="add-annotation-btn" onclick="addAnnotation({{ loop.index0 }})">Add Annotation</button>
+            </div>
+        {% endfor %}
+        <input type="submit" class="submit-btn" value="Save annotations">
+    </form>
+</body>
+</html>

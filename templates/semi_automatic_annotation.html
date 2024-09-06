@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semi-automatic Annotations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+    function addAnnotation(index) {
+        const container = document.getElementById(`annotations_${index}`);
+        const annotationDiv = document.createElement('div');
+        const annotationIndex = container.childElementCount;
+
+        annotationDiv.innerHTML = `
+            <div id="annotation_${index}_${annotationIndex}">
+                <label for="polarity_${index}_${annotationIndex}">Polarity:</label>
+                <select name="polarity_${index}_${annotationIndex}">
+                    <option value="">Seleziona</option>
+                    <option value="Positive">Positive</option>
+                    <option value="Negative">Negative</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Conflict">Conflict</option>
+                </select>
+                <label for="category_${index}_${annotationIndex}">Category:</label>
+                <select name="category_${index}_${annotationIndex}">
+                    <option value="">Select</option>
+                    <option value="Skin/Hair Issue">Skin/Hair Issue</option>
+                    <option value="Overall Satisfaction">Overall Satisfaction</option>
+                    <option value="Texture/Thickness">Texture/Thickness</option>
+                    <option value="Tone/Color">Tone/Color</option>
+                    <option value="Results">Results</option>
+                    <option value="General feel/effect">General feel/effect</option>
+                    <option value="Price/Value">Price/Value</option>
+                    <option value="Packaging">Packaging</option>
+                    <option value="Smell">Smell</option>
+                    <option value="Recommendation">Recommendation</option>
+                    <option value="Suitability">Suitability</option>
+                    <option value="Absorption">Absorption</option>
+                    <option value="Delivery/Customer Service">Delivery/Customer Service</option>
+                    <option value="Easy to use">Easy to use</option>
+                    <option value="Ingredients">Ingredients</option>
+                    <option value="Durability">Durability</option>
+                    <option value="Sustainability">Sustainability</option>
+                    <option value="Quantity">Quantity</option>
+                    <option value="Portability">Portability</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="text" name="custom_category_${index}_${annotationIndex}">
+                <button type="button" onclick="removeAnnotation(${index}, ${annotationIndex})">Remove</button>
+                <br>
+            </div>
+        `;
+        container.appendChild(annotationDiv);
+    }
+
+    function populateAnnotations(index, predictions) {
+        const container = document.getElementById(`annotations_${index}`);
+
+        predictions.forEach((prediction, predictionIndex) => {
+            if (predictionIndex === 0) {
+                // Popolare i campi visibili
+                const polaritySelect = document.querySelector(`select[name="polarity_${index}_0"]`);
+                const categorySelect = document.querySelector(`select[name="category_${index}_0"]`);
+                const customCategoryInput = document.querySelector(`input[name="custom_category_${index}_0"]`);
+
+                // Popolo il campo di polarità
+                if (prediction.polarity) {
+                    Array.from(polaritySelect.options).forEach(option => {
+                        if (option.value === prediction.polarity) {
+                            option.selected = true;
+                        }
+                    });
+                }
+
+                // Popolo il campo di categoria
+                if (prediction.category) {
+                    Array.from(categorySelect.options).forEach(option => {
+                        if (option.value === prediction.category) {
+                            option.selected = true;
+                        }
+                    });
+
+                    // Se la categoria non è nelle opzioni, imposto il campo di testo personalizzato
+                    if (!Array.from(categorySelect.options).some(option => option.value === prediction.category)) {
+                        customCategoryInput.value = prediction.category;
+                    } else {
+                        customCategoryInput.value = ''; // Resetta il campo custom_category se la categoria standard è selezionata
+                    }
+                }
+            } else {
+                // Aggiungo annotazione sotto "Aggiungi un Annotazione"
+                const annotationDiv = document.createElement('div');
+                const annotationIndex = container.childElementCount;
+
+                annotationDiv.innerHTML = `
+                    <div id="annotation_${index}_${annotationIndex}">
+                        <label for="polarity_${index}_${annotationIndex}">Polarity:</label>
+                        <select name="polarity_${index}_${annotationIndex}">
+                            <option value="">Seleziona</option>
+                            <option value="Positive" ${prediction.polarity === 'Positive' ? 'selected' : ''}>Positive</option>
+                            <option value="Negative" ${prediction.polarity === 'Negative' ? 'selected' : ''}>Negative</option>
+                            <option value="Neutral" ${prediction.polarity === 'Neutral' ? 'selected' : ''}>Neutral</option>
+                            <option value="Conflict" ${prediction.polarity === 'Conflict' ? 'selected' : ''}>Conflict</option>
+                        </select>
+                        <label for="category_${index}_${annotationIndex}">Category:</label>
+                        <select name="category_${index}_${annotationIndex}" onchange="resetCustomCategory(this, ${index}, ${annotationIndex})">
+                            <option value="">Seleziona</option>
+                            <option value="Skin/Hair Issue" ${prediction.category === 'Skin/Hair Issue' ? 'selected' : ''}>Skin/Hair Issue</option>
+                            <option value="Overall Satisfaction" ${prediction.category === 'Overall Satisfaction' ? 'selected' : ''}>Overall Satisfaction</option>
+                            <option value="Texture/Thickness" ${prediction.category === 'Texture/Thickness' ? 'selected' : ''}>Texture/Thickness</option>
+                            <option value="Tone/Color" ${prediction.category === 'Tone/Color' ? 'selected' : ''}>Tone/Color</option>
+                            <option value="Results" ${prediction.category === 'Results' ? 'selected' : ''}>Results</option>
+                            <option value="General feel/effect" ${prediction.category === 'General feel/effect' ? 'selected' : ''}>General feel/effect</option>
+                            <option value="Price/Value" ${prediction.category === 'Price/Value' ? 'selected' : ''}>Price/Value</option>
+                            <option value="Packaging" ${prediction.category === 'Packaging' ? 'selected' : ''}>Packaging</option>
+                            <option value="Smell" ${prediction.category === 'Smell' ? 'selected' : ''}>Smell</option>
+                            <option value="Recommendation" ${prediction.category === 'Recommendation' ? 'selected' : ''}>Recommendation</option>
+                            <option value="Suitability" ${prediction.category === 'Suitability' ? 'selected' : ''}>Suitability</option>
+                            <option value="Absorption" ${prediction.category === 'Absorption' ? 'selected' : ''}>Absorption</option>
+                            <option value="Delivery/Customer Service" ${prediction.category === 'Delivery/Customer Service' ? 'selected' : ''}>Delivery/Customer Service</option>
+                            <option value="Easy to use" ${prediction.category === 'Easy to use' ? 'selected' : ''}>Easy to use</option>
+                            <option value="Ingredients" ${prediction.category === 'Ingredients' ? 'selected' : ''}>Ingredients</option>
+                            <option value="Durability" ${prediction.category === 'Durability' ? 'selected' : ''}>Durability</option>
+                            <option value="Sustainability" ${prediction.category === 'Sustainability' ? 'selected' : ''}>Sustainability</option>
+                            <option value="Quantity" ${prediction.category === 'Quantity' ? 'selected' : ''}>Quantity</option>
+                            <option value="Portability" ${prediction.category === 'Portability' ? 'selected' : ''}>Portability</option>
+                            <option value="Others" ${prediction.category === 'Others' ? 'selected' : ''}>Others</option>
+                        </select>
+                        <input type="text" name="custom_category_${index}_${annotationIndex}">
+                        <button type="button" onclick="removeAnnotation(${index}, ${annotationIndex})">Remove</button>
+                        <br>
+                    </div>
+                `;
+                container.appendChild(annotationDiv);
+            }
+        });
+    }
+
+    function fetchPredictions() {
+        fetch('/get_predictions', {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(predictions => {
+            predictions.forEach((prediction, index) => {
+                populateAnnotations(index, prediction.predictions);
+            });
+        })
+        .catch(error => console.error('Errore durante il recupero delle previsioni:', error));
+    }
+
+    // Chiamata per ottenere le previsioni all'avvio della pagina
+    window.onload = function() {
+        fetchPredictions();
+    };
+
+    function addAnnotation(index) {
+        const container = document.getElementById(`annotations_${index}`);
+        const annotationDiv = document.createElement('div');
+        const annotationIndex = container.childElementCount;
+
+        annotationDiv.innerHTML = `
+            <div id="annotation_${index}_${annotationIndex}">
+                <label for="polarity_${index}_${annotationIndex}">Polarity:</label>
+                <select name="polarity_${index}_${annotationIndex}">
+                    <option value="">Seleziona</option>
+                    <option value="Positive">Positive</option>
+                    <option value="Negative">Negative</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Conflict">Neutral</option>
+                </select>
+                <label for="category_${index}_${annotationIndex}">Category:</label>
+                <select name="category_${index}_${annotationIndex}" onchange="resetCustomCategory(this, ${index}, ${annotationIndex})">
+                    <option value="">Select</option>
+                    <option value="Skin/Hair Issue">Skin/Hair Issue</option>
+                    <option value="Overall Satisfaction">Overall Satisfaction</option>
+                    <option value="Texture/Thickness">Texture/Thickness</option>
+                    <option value="Tone/Color">Tone/Color</option>
+                    <option value="Results">Results</option>
+                    <option value="General feel/effect">General feel/effect</option>
+                    <option value="Price/Value">Price/Value</option>
+                    <option value="Packaging">Packaging</option>
+                    <option value="Smell">Smell</option>
+                    <option value="Recommendation">Recommendation</option>
+                    <option value="Suitability">Suitability</option>
+                    <option value="Absorption">Absorption</option>
+                    <option value="Delivery/Customer Service">Delivery/Customer Service</option>
+                    <option value="Easy to use">Easy to use</option>
+                    <option value="Ingredients">Ingredients</option>
+                    <option value="Durability">Durability</option>
+                    <option value="Sustainability">Sustainability</option>
+                    <option value="Quantity">Quantity</option>
+                    <option value="Portability">Portability</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="text" name="custom_category_${index}_${annotationIndex}">
+                <button type="button" onclick="removeAnnotation(${index}, ${annotationIndex})">Remove</button>
+                <br>
+            </div>
+        `;
+        container.appendChild(annotationDiv);
+    }
+
+    function removeAnnotation(index, annotationIndex) {
+        const annotationDiv = document.getElementById(`annotation_${index}_${annotationIndex}`);
+        annotationDiv.remove();
+    }
+
+    function resetCustomCategory(selectElement, index, annotationIndex) {
+        const customCategoryInput = document.querySelector(`input[name="custom_category_${index}_${annotationIndex}"]`);
+        customCategoryInput.value = ''; // Resetta il campo custom_category quando una categoria standard viene selezionata
+    }
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Semi-automatic Annotations</h1>
+        
+        <form method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Reviews</th>
+                        <th>Text</th>
+                        <th>Polarity</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for review in reviews %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ review.text }}</td>
+                        <td>
+                            <select name="polarity_{{ loop.index0 }}_0">
+                                <option value="">Seleziona</option>
+                                <option value="Positive">Positive</option>
+                                <option value="Negative">Negative</option>
+                                <option value="Neutral">Neutral</option>
+                                <option value="Conflict">Neutral</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="category_{{ loop.index0 }}_0">
+                                <!--
+                                <option value="">Select</option>
+                                <option value="GENERAL#SATISFACTION-DESIGN">GENERAL#SATISFACTION-DESIGN</option>
+                                <option value="GENERAL#PORTABILITY">GENERAL#PORTABILITY</option>
+                                <option value="GENERAL#USABILITY">GENERAL#USABILITY</option>
+                                <option value="GENERAL#DOSAGE">GENERAL#DOSAGE</option>
+                                <option value="GENERAL#SIZE">GENERAL#SIZE</option>
+                                <option value="GENERAL#SUSTAINABILITY">GENERAL#SUSTAINABILITY</option>
+                                <option value="INTEGRITY#BROKEN">INTEGRITY#BROKEN</option>
+                                <option value="INTEGRITY#LEAKAGE">INTEGRITY#LEAKAGE</option>
+                                <option value="INTEGRITY#E-COMMERCER_READINESS">INTEGRITY#E-COMMERCER_READINESS</option>
+                                <option value="INTEGRITY#CLEANLINESS">INTEGRITY#CLEANLINESS</option>
+                                <option value="TECHNICAL#SUCTION_ABILITY">TECHNICAL#SUCTION_ABILITY</option>
+                                <option value="TECHNICAL#STROKES_TO_PRIME">TECHNICAL#STROKES_TO_PRIME</option>
+                                <option value="TECHNICAL#FORCE_TO_ACTUATE">TECHNICAL#FORCE_TO_ACTUATE</option>
+                                <option value="OTHERS">OTHERS</option>
+                                -->
+                                <option value="">Select</option>
+                                <option value="Skin/Hair Issue">Skin/Hair Issue</option>
+                                <option value="Overall Satisfaction">Overall Satisfaction</option>
+                                <option value="Texture/Thickness">Texture/Thickness</option>
+                                <option value="Tone/Color">Tone/Color</option>
+                                <option value="Results">Results</option>
+                                <option value="General feel/effect">General feel/effect</option>
+                                <option value="Price/Value">Price/Value</option>
+                                <option value="Packaging">Packaging</option>
+                                <option value="Smell">Smell</option>
+                                <option value="Recommendation">Recommendation</option>
+                                <option value="Suitability">Suitability</option>
+                                <option value="Absorption">Absorption</option>
+                                <option value="Delivery/Customer Service">Delivery/Customer Service</option>
+                                <option value="Easy to use">Easy to use</option>
+                                <option value="Ingredients">Ingredients</option>
+                                <option value="Durability">Durability</option>
+                                <option value="Sustainability">Sustainability</option>
+                                <option value="Quantity">Quantity</option>
+                                <option value="Portability">Portability</option>
+                                <option value="Others">Others</option>
+
+                                <!-- Opzioni della categoria verranno popolate dinamicamente -->
+                            </select>
+                            <input type="text" name="custom_category_{{ loop.index0 }}_0" placeholder="Other category">
+                        </td>
+                    </tr>
+                    <!-- Aggiungi iterazioni per le annotazioni aggiuntive -->
+                    <tr>
+                        <td colspan="4">
+                            <div id="annotations_{{ loop.index0 }}">
+                                <!-- Inserisci qui le annotazioni aggiuntive -->
+                            </div>
+                            <button type="button" onclick="addAnnotation({{ loop.index0 }})">Add Annotation</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <input type="submit" value="Save Annotations">
+        </form>
+        
+    </div>
+</body>
+</html>

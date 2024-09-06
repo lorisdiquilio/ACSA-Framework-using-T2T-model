@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Risultati</title>
+</head>
+<body>
+    <h1>Risultati del modello</h1>
+    <table>
+        <tr>
+            <th>Recensione</th>
+            <th>Categoria</th>
+            <th>Sentimento</th>
+        </tr>
+        {% for prediction in predictions %}
+        <tr>
+            <td rowspan="{{ prediction.categories|length }}">{{ prediction.review }}</td>
+            {% for category, sentiment in prediction.categories.items() %}
+            <td>{{ category }}</td>
+            <td>{{ sentiment }}</td>
+            </tr><tr>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

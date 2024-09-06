@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        select, input[type="file"], input[type="text"], button {
+            width: calc(100% - 20px);
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .documentation {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        li strong {
+            color: #333;
+        }
+        .link {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Converter</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="conversion_type">Select Conversion Type:</label>
+            <select name="conversion_type" id="conversion_type">
+                {% for conversion in conversion_types %}
+                    <option value="{{ conversion }}">{{ conversion }}</option>
+                {% endfor %}
+            </select>
+            <label for="input_file">Select Input File:</label>
+            <input type="file" name="input_file" id="input_file" required>
+            <label for="output_folder">Output Folder:</label>
+            <input type="text" name="output_folder" id="output_folder" placeholder="Enter output folder path" required>
+            <button type="submit">Convert</button>
+        </form>
+        <div class="documentation">
+            <h4>Please enter also the name of the file you are converting in the output folder</h4>
+            <h2>Function Descriptions - Data Converter Section</h2>
+            <ul>
+                <li><strong>JSON to CSV - ACOS Task:</strong> Converts data from the ".jsonl" into a ".csv". If a sentence has multiple annotations, these are repeated for each of them. <a href="{{ url_for('static', filename='convertitori/formats/JSON_to_CSV.txt') }}" class="link">See the input and output formats.</a></li>
+                <li><strong>JSON to TXT - ACSD Task:</strong> Converts data from the ".jsonl" to ".txt". It is used for the <a href="https://github.com/IsakZhang/Generative-ABSA" class="link">Generative-ABSA tool</a> with the task (paradigm extraction). <a href="{{ url_for('static', filename='convertitori/formats/JSON_to_TXT.txt') }}" class="link">See input and output formats.</a></li>
+                <li><strong>JSON (Label-Studio) to SemEvalXML2014 - ABSA Task:</strong> Converts a JSON file (from Label-Studio) to SemEval XML 2014 format. <a href="{{ url_for('static', filename='convertitori/formats/JSON_TO_SemEvalXML14.txt') }}" class="link">See the input and output formats.</a></li>
+                <li><strong>JSON (Label-Studio) to SemEvalXML2016 -Task 5 Subtask-1 - ACSA Task:</strong> Converts a JSON file (from Label-Studio) to SemEval XML 2016 (Sub-task 1) format. <a href="{{ url_for('static', filename='convertitori/formats/JSONLS_to_SemEvalXML_sb1.txt') }}" class="link">See the input and output formats.</a></li>
+                <li><strong>JSON (Label-Studio) to SemEvalXML2016 -Task 5 Subtask-1 (opinion target version) - ACSA Task:</strong> Converts a JSON file (from Label-Studio) to SemEval XML 2016 (Sub-task 1) format with the tag "opinion target". <a href="{{ url_for('static', filename='convertitori/formats/JSONLS_TO_SemEvalXML_sb1_opinion.txt') }}" class="link">See the input and output formats.</a></li>
+                <li><strong>JSON (Label-Studio) to SemEvalXML2016 -Task 5 Subtask-2 - ACSA Task:</strong> Converts a JSON file (from Label-Studio) to SemEval XML 2016 (Sub-task 2) format. <a href="{{ url_for('static', filename='convertitori/formats/JSONLS_to_SemEvalXML_sb2.txt') }}" class="link">See the input and output formats.</a></li>
+                <li><strong>Remove Opinions from JSONL (ASTE Task):</strong> Removes opinions from a JSONL file built for ACOS task to obtain the data for ASTE Task. <a href="{{ url_for('static', filename='convertitori/formats/JSONL_TO_JSONLWO.txt') }}" class="link">See the input and output formats.</a></li>
+                <li><strong>Remove Aspects and Check Duplicates(ACSA Task):</strong> Removes aspects and opinions from the JSONL used for the ACOS Task. Without these two elements, the annotations for the same sentence could become identical, hence a check for duplicates is performed. This function facilitates this transition and ensures the integrity of the dataset. <a href="{{ url_for('static', filename='convertitori/formats/JSONL_TO_JSONLWAO.txt') }}" class="link">See the input and output formats.</a></li>
+                <li><strong>JSONL to TSV(ACSA Task):</strong> Converts a JSONL with Category and Sentiment (see previous function) file to TSV format used with this tool: <a href="https://github.com/NUSTM/ACSA-HGCN" class="link">ACSA-HGCN</a> . <a href="{{ url_for('static', filename='convertitori/formats/JSONL_to_TSV.txt') }}" class="link">See input and output formats.</a></li>
+                <li><strong>SemEval14 to JSONL(ACSA Task):</strong> Convert the SemEval14 datasets into JSONL useful for the tool used in this framework . <a href="{{ url_for('static', filename='convertitori/formats/XML14_to_JSONL.txt') }}" class="link">See input and output formats.</a></li>
+                <li><strong>SemEval15 to JSONL(ACSA Task):</strong> Convert the SemEval15 datasets into JSONL useful for the tool used in this framework . <a href="{{ url_for('static', filename='convertitori/formats/XML15_to_JSONL.txt') }}" class="link">See input and output formats.</a></li>
+                <li><strong>SemEval16 to JSONL(ACSA Task):</strong> Convert the SemEval16 datasets into JSONL useful for the tool used in this framework . <a href="{{ url_for('static', filename='convertitori/formats/XML16_to_JSONL.txt') }}" class="link">See input and output formats.</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

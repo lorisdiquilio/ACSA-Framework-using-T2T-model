@@ -1,0 +1,1359 @@
+[
+    {
+        "text": "For the price, I think you should be able to use it more than a week before it’s empty.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Durability"
+            }
+        ]
+    },
+    {
+        "text": "I’m really impressed with the packaging of this product. Not only is it aesthetically pleasing, but it’s also very functional. The pump dispenses the perfect amount of product every time.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Packaging"
+            }
+        ]
+    },
+    {
+        "text": "Pricey and tampered!",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Delivery/Customer Service"
+            }
+        ]
+    },
+    {
+        "text": "After 3 days of use, I broke out terribly; the worst since high school( giant forehead zits). after 4 days, I woke up with this. No thank you.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Overall Satisfaction"
+            }
+        ]
+    },
+    {
+        "text": "The product has a strange smell that I don’t like. However, it has a positive impact on my pores, they seem less visible now.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Unfortunately this product did not provide me with a dewey glow on my skin.  The serum dried my skin out completely.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Tone/Color"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Guys take notice this is a wonderful product this really works you just put a little dab under your eyes and all over your face it really smooth out the wrinkles in appearance it’s a terrific product",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Recommendation"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "I’ve used this product for years and this is definitely not it, it’s much thinner and smells funny.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Smell"
+            }
+        ]
+    },
+    {
+        "text": "Smell, drying & damaging to my hair",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Was very excited but sad when I realized I wasted me own money on a product that was open and spread around",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Delivery/Customer Service"
+            }
+        ]
+    },
+    {
+        "text": "This is very, very thin lotion. It isn’t moisturizing at all.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Estee Lauder is a go to product.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            }
+        ]
+    },
+    {
+        "text": "The product is quite expensive for the quantity provided.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Quantity"
+            }
+        ]
+    },
+    {
+        "text": "it leaves the skin beautiful",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "General feel/effect"
+            }
+        ]
+    },
+    {
+        "text": "The product leaks out of the packaging, it’s very messy.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Packaging"
+            }
+        ]
+    },
+    {
+        "text": "Very good but small size",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Quantity"
+            }
+        ]
+    },
+    {
+        "text": "A waste of money! Did not do a thing to improve fine lines or wrinkles.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "The product’s hydration effect doesn’t last as long as I expected.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Durability"
+            }
+        ]
+    },
+    {
+        "text": "Love this foundation . The consistency feels so good almost like silk spreading across your face. It provides such a beautiful glow . Will certainly purchase again",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Tone/Color"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Others"
+            }
+        ]
+    },
+    {
+        "text": "The tube packaging makes it difficult to control the amount of product dispensed, leading to wastage.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Packaging"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Easy to use"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Sustainability"
+            }
+        ]
+    },
+    {
+        "text": "Find the very short length of the pump annoying. It’s so short that it’s impossible to pump the liquid without wasting some on the bottle itself. Very disappointing.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Packaging"
+            }
+        ]
+    },
+    {
+        "text": "I’m 70 and my hair has not looked this great in years",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            }
+        ]
+    },
+    {
+        "text": "The shampoo comes out too fast barely squeezing the tube. For the price, it’s a waste of product. Coming in a pump would be more useful and helpful for disabled.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Packaging"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Sustainability"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Easy to use"
+            }
+        ]
+    },
+    {
+        "text": "Despite its rich texture, the cream feels surprisingly light on the skin.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "Really wanted to love this product. Jumped in headfirst, but upon reading into the ingredients after suffering breakout after breakout, the percentage is just unnecessary high. Thought my skin was just adjusting but nope, its just too much. Found a few posts on reddit experiencing the same with the product.",
+        "labels": [
+            {
+                "polarity": "Neutral",
+                "category": "Others"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Ingredients"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "This is the serum I’d used for many years. After chemo and taking thousands of drugs for cancer, during many years, my skin keeps beautiful thanks to Advanced Night Repair. I reccommend it 100%",
+        "labels": [
+            {
+                "polarity": "Neutral",
+                "category": "Others"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Recommendation"
+            }
+        ]
+    },
+    {
+        "text": "Have very large pores. Have tried almost every product on the market claiming to hide or plur  Always met with disappointment and wasted money. Not this one. Patting it on works the best. Then I apply my foundation. No visible pores!! Took me 40 years to discover this GREAT product. I am even complemented on my complexion. Something I thought I would never hear. Your search is over! Great confidence builder!!!!!",
+        "labels": [
+            {
+                "polarity": "Neutral",
+                "category": "Others"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "The retail box was broken into. No damage to the bottles though.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Delivery/Customer Service"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Others"
+            }
+        ]
+    },
+    {
+        "text": "The product has a heavy feel that I don’t like.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "This product doesn't leave the skin dry but didn't improve breakouts",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Item arrived in good condition, pleased with this purchase.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Delivery/Customer Service"
+            }
+        ]
+    },
+    {
+        "text": "The delivery was prompt and the product was well-packaged. However, it didn’t do much for my wrinkles or fine lines.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Delivery/Customer Service"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "I have an autoimmune disease that causes dry skin and sensitivity. I shouldve read the description more closely. This is not for sensitive skin nor dry skin as it dries my skin even more. As you can see in my picture, it flakes and causes redness. Unfortunate because I love their other products. This one is just not meant for me.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Suitability"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Overall Satisfaction"
+            }
+        ]
+    },
+    {
+        "text": "I was disappointed to see that the product contains parabens.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Ingredients"
+            }
+        ]
+    },
+    {
+        "text": "This product is perfect for my sensitive skin, it’s so gentle.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Suitability"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "This is a thick cream, somewhat greasy, with a white cast. I was hoping it would be more moisturizing.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "This product works well for my normal skin type, it balances and nourishes my skin.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Suitability"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            },
+            {
+                "polarity": "Positive",
+                "category": "General feel/effect"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "This product promised to be gentle, but it caused irritation and redness on my skin. It’s not what I expected.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "Coincidentally  broke out all over my face after incorporating this cleanser into my skin care routine.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "The product has a strange smell that I find off-putting.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Smell"
+            }
+        ]
+    },
+    {
+        "text": "Non- greasy, easy to apply, feels like it tightens the skin on contact. No allergic reaction to report. Love it!",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Easy to use"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Positive",
+                "category": "General feel/effect"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            }
+        ]
+    },
+    {
+        "text": "Another drawback is how much packaging is wasted, this item is only 0.5oz and comes in an unnecessarily big box. The final drawback is the amount of product you get for the price, 0.5oz seems like a very small tube of product for how expensive it is.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Sustainability"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Packaging"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Quantity"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            }
+        ]
+    },
+    {
+        "text": "I wish this brand would make more effort to use sustainable packaging.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Sustainability"
+            }
+        ]
+    },
+    {
+        "text": "This cleanser remains my favorite because it smells so fresh and leaves my skin so smooth. A very small amount does a great job. The gentle “grit” part of the lotion releases any buildup that appears on the skin, whatever the circumstances. The price just isn’t an issue. It isn’t expensive, and because small amounts are so effective, it lasts. The last bit is the same quality as the first. It’s a wonderful product.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Durability"
+            }
+        ]
+    },
+    {
+        "text": "Good lotion but too expensive...",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            }
+        ]
+    },
+    {
+        "text": "This product pilled so bad on my freshly washed face. And it was so clumpy and just gross feeling on my face. It also looked so white on my face after i rubbed it in. It just didn’t work for me.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "General feel/effect"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "The product contains some ingredients that can be irritating to the skin.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Ingredients"
+            }
+        ]
+    },
+    {
+        "text": "It works well. My dry itching skin stopped itching. It is not greasy and my clothes don’t seem to stick to it",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "Loved the way this cleansed my face",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "General feel/effect"
+            }
+        ]
+    },
+    {
+        "text": "The product takes a long time to dry",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Absorption"
+            }
+        ]
+    },
+    {
+        "text": "Help my face look younger and erase lines.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "This lotion has a wonderfully rich and creamy consistency.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "I cannot be without this cleanser! I tried to break up with it because it is so expensive, but nothing does my skin so good as iS CLINICAL Cleansing Complex! I buy the smaller size and try to use as little as possible--a little goes a long way--to make it last longer. Also like using a cleansing balm prior, especially in the summer.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Durability"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Others"
+            }
+        ]
+    },
+    {
+        "text": "Like some of the 1-star reviews, mine came with the safety seal opened. As I started to use it, the scent reminded me of Dial soap. I tried to Google it, went down a rabbit hole, and found that dermatologists have recommended that people with acne-prone skin use Dial soap! Is this product just Dial soap? I've used the $25 itty-bitty bottle for the past few months and have not seen any significant changes. It would be funny if it were Dial soap. LOL! Jokes on me.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Delivery/Customer Service"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Others"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "First, this product is expensive-  the tube is tiny.  Luckily I only use it on my nose, so I don't feel as ripped of as others who apply to their entire face.  The product works well to fill in pores.  It blends with my skin tone and becomes invisible.  But because it is meant to fill pores and not do the job of foundation, I need that too.  Only problem is, it is NOT compatible with foundation, whether you apply it under or over.  I have tried several different foundations and it is a muddy mess no matter how much or little or each product you use.  After all of my experimentation, I can confidently say that this aspect of the product is a huge fail.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Quantity"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Tone/Color"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Others"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Despite the promises, I did not notice any improvement in my skin tone. The product has a strange smell that I don’t like, but it does its job",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Tone/Color"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "Well, I have used this now religiously every night and every morning and for the life of me I just can’t see any difference to my face. It dries in very, very fast hardly giving me a chance to cover my face and forehead. And even though it dries in too fast it left my face very sticky for over an hour before I could put my moisture on. It may well work fantastic for others but I would have liked to have seen a difference to my skin.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Results"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Absorption"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "We shall see how it works",
+        "labels": [
+            {
+                "polarity": "Neutral",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "Our family loves the CeraVe body cream, so My son and I purchased the face cream. For my son who is 16 and seem to do okay for his dry skin but as a senior person in my 50s, it was very drying.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Others"
+            },
+            {
+                "polarity": "Conflict",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "This product comes in a generous size and significantly improves skin firmness and tone, but it takes a while to absorb fully into the skin.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Quantity"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Tone/Color"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Absorption"
+            }
+        ]
+    },
+    {
+        "text": "It broke my skin out and burned my skin",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "The ingredients list is full of beneficial elements for the skin.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Ingredients"
+            }
+        ]
+    },
+    {
+        "text": "I'm not sure if it is an allergic reaction or not but the skin under my skin got very dry and itchy, extremely irritated.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "General feel/effect"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "I love the elf brand goes on smooth with no caking.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "The perfume has a lovely floral note that I adore, but it also has an underlying musky scent that I’m not too fond of.",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Smell"
+            }
+        ]
+    },
+    {
+        "text": "I love tatcha products! I’ve used so many different face washes and had issues. Tatcha is easy on my skin, cleans my face and leaves my face feeling soft and moisturized. Not uncommon for the boys in the house to come steal my face wash too. It’s a fan favorite in our house. The travel size pack is also great for trips.",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Others"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "General feel/effect"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Portability"
+            }
+        ]
+    },
+    {
+        "text": "Easy to apply, doesn’t irritate my sensitive skin, works perfectly!",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Easy to use"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Suitability"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "I was very impressed with the packaging of this product.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Packaging"
+            }
+        ]
+    },
+    {
+        "text": "I was disappointed to learn that the brand is not cruelty-free.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Sustainability"
+            }
+        ]
+    },
+    {
+        "text": "This product has helped improve the tone of my skin, reducing the appearance of dark spots and hyperpigmentation.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Tone/Color"
+            }
+        ]
+    },
+    {
+        "text": "This had great evidence based ingredient in a light weight formula. I notice no smell to this, it is clear, and absorbs quickly. I've been getting lots of complements on my skin since using this.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Ingredients"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Neutral",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Absorption"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            }
+        ]
+    },
+    {
+        "text": "This product doesn't leave the skin dry but didn't improve breakouts",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "I have been using for a month and get nothing but compliments on my skin. Everyone asks what I am using",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Others"
+            }
+        ]
+    },
+    {
+        "text": "I can’t see a diff but I have sensitive skin and it does not harm my skin",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Results"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Horrible. I broke out and got a burn",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Great pump dispenser which gets more than enough. Very dry on, and dries stickey. Can leave a nice sheer finish. Not moistening enough for me",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Packaging"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Tone/Color"
+            }
+        ]
+    },
+    {
+        "text": "It doesn’t necessarily make me break out or anything, but doesn’t keep it as clear as my regular wash. Especially for the price I think I’ll stick with my regular kiehls instead.",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            }
+        ]
+    },
+    {
+        "text": "I was out shopping in brick and mortar stores where this was priced at $85 and I got it here for $30. I haven’t used this bottle yet, but the product usually does wonders to smooth my skin.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "The product is effective and does smooth out my skin",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "leave the skin very glow",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Tone/Color"
+            }
+        ]
+    },
+    {
+        "text": "I love how smooth and poreless you look, but what the heck is up with the pilling. It’s really annoying trying to wipe away the endless pills.",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "kinda pricey but smells and works great",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "Easy to use",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Easy to use"
+            }
+        ]
+    },
+    {
+        "text": "This is best face serum for me. I’ve been using since years. Good value for money and recommend it.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Recommendation"
+            }
+        ]
+    },
+    {
+        "text": "I like there is no odor. It smooths my rough knees and elbows. It is great to smooth the backs of my upper arms.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            }
+        ]
+    },
+    {
+        "text": "Product works great",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "I've used this product for years and loved it, but in my most recent order, I was sent a version of it that behaves entirely differently from what I've used in the past. Whatever changes they made to the product made the goop more liquidy than before, it did not minimize my pores, and it flaked off of my skin soon after applying. So sad I will have to find something new, but whatever their current formula is makes this product not actually do what it's intended to do.",
+        "labels": [
+            {
+                "polarity": "Conflict",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "I read the reviews, so I bought it, nothing is wrong with this product, but it’s not for me I get lots of small breakout on my face. I taught this is the one, I have sensitive skin. hope this help any readers.",
+        "labels": [
+            {
+                "polarity": "Neutral",
+                "category": "Others"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Suitability"
+            }
+        ]
+    },
+    {
+        "text": "So I left it on overnight and it left chemical burns ALLLLLLL over my scalp…",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "Quick and effective, long-lasting, easy to take on the go (no need for water like with pills), etc.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Durability"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Portability"
+            }
+        ]
+    },
+    {
+        "text": "I really love this product. So easy to use. No smell. Not sticky. Worth the price. Made my skin look 20 years younger",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Overall Satisfaction"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Easy to use"
+            },
+            {
+                "polarity": "Neutral",
+                "category": "Smell"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Price/Value"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            }
+        ]
+    },
+    {
+        "text": "the bottles are underfilled at just two-thirds",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Quantity"
+            }
+        ]
+    },
+    {
+        "text": "Despite the promises of a glowing complexion, this product left my skin looking ashy and washed out.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Tone/Color"
+            }
+        ]
+    },
+    {
+        "text": "I’m not satisfied with this product and won’t be buying it again.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Overall Satisfaction"
+            }
+        ]
+    },
+    {
+        "text": "The brand could do more to reduce its environmental impact.",
+        "labels": [
+            {
+                "polarity": "Negative",
+                "category": "Sustainability"
+            }
+        ]
+    },
+    {
+        "text": "The product performs exceptionally well, exceeding my expectations.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Results"
+            }
+        ]
+    },
+    {
+        "text": "I love that this product uses natural ingredients. It’s gentle on my skin and doesn’t cause any irritation. But the smell is not to my liking.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "Ingredients"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "Skin/Hair Issue"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Smell"
+            }
+        ]
+    }
+]

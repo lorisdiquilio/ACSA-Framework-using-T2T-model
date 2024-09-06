@@ -1,0 +1,27 @@
+Input: 
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Reviews>
+    <Review rid="1004293">
+        <sentences>
+            <sentence id="1004293:0">
+                <text>Judging from previous posts this used to be a good place, but not any longer.</text>
+                <Opinions>
+                    <Opinion target="place" category="RESTAURANT#GENERAL" polarity="negative" from="51" to="56"/>
+                </Opinions>
+            </sentence>
+
+
+Output:
+
+[
+    {
+        "text": "Judging from previous posts this used to be a good place, but not any longer.",
+        "labels": [
+            {
+                "polarity": "negative",
+                "category": "RESTAURANT#GENERAL"
+            }
+        ]
+    }
+]

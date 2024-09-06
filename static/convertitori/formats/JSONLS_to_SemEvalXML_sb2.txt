@@ -1,0 +1,98 @@
+Input:
+
+[
+  {
+    "Unnamed: 0": 33,
+    "Review_number": 16,
+    "Sentence_number": 0,
+    "Sentence": "I just started using Flonase and I can finally breathe!",
+    "Review": "I just started using Flonase and I can finally breathe! Easy to use too!\nThe only issue I have is the price. I can only afford I 77 doze bottle every 2 months.",
+    "Unnamed: 5": "",
+    "Unnamed: 6": "",
+    "Unnamed: 7": "",
+    "id": 240030,
+    "Category": "NULL",
+    "annotator": 1,
+    "annotation_id": 246,
+    "created_at": "2023-04-03T15:56:34.740857Z",
+    "updated_at": "2023-04-03T15:56:34.740902Z",
+    "lead_time": 3.355
+  },
+  {
+    "Unnamed: 0": 34,
+    "Review_number": 16,
+    "Sentence_number": 1,
+    "Sentence": "Easy to use too!\n",
+    "Review": "I just started using Flonase and I can finally breathe! Easy to use too!\nThe only issue I have is the price. I can only afford I 77 doze bottle every 2 months.",
+    "Unnamed: 5": "",
+    "Unnamed: 6": "",
+    "Unnamed: 7": "",
+    "id": 240031,
+    "Category": "CONVENIENCE#USABILITY",
+    "Sentiment": "Positive",
+    "annotator": 1,
+    "annotation_id": 247,
+    "created_at": "2023-04-03T15:56:57.882875Z",
+    "updated_at": "2023-04-03T15:56:57.882931Z",
+    "lead_time": 20.326
+  },
+  {
+    "Unnamed: 0": 35,
+    "Review_number": 16,
+    "Sentence_number": 2,
+    "Sentence": "The only issue I have is the price.",
+    "Review": "I just started using Flonase and I can finally breathe! Easy to use too!\nThe only issue I have is the price. I can only afford I 77 doze bottle every 2 months.",
+    "Unnamed: 5": "",
+    "Unnamed: 6": "",
+    "Unnamed: 7": "",
+    "id": 240032,
+    "Category": "PRICE#PRICE",
+    "Sentiment": "Negative",
+    "annotator": 1,
+    "annotation_id": 248,
+    "created_at": "2023-04-03T15:57:03.643492Z",
+    "updated_at": "2023-04-03T15:57:03.643574Z",
+    "lead_time": 3.985
+  },
+  {
+    "Unnamed: 0": 36,
+    "Review_number": 16,
+    "Sentence_number": 3,
+    "Sentence": "I can only afford I 77 doze bottle every 2 months.",
+    "Review": "I just started using Flonase and I can finally breathe! Easy to use too!\nThe only issue I have is the price. I can only afford I 77 doze bottle every 2 months.",
+    "Unnamed: 5": "",
+    "Unnamed: 6": "",
+    "Unnamed: 7": "",
+    "id": 240033,
+    "Category": "NULL",
+    "annotator": 1,
+    "annotation_id": 250,
+    "created_at": "2023-04-03T15:57:33.855619Z",
+    "updated_at": "2023-04-03T15:57:33.855687Z",
+    "lead_time": 2.355
+  }
+  ]
+
+
+Output:
+
+	<Review rid="16">
+		<sentences>
+			<sentence id="16:0">
+				<text>I just started using Flonase and I can finally breathe!</text>
+			</sentence>
+			<sentence id="16:1">
+				<text>Easy to use too!</text>
+			</sentence>
+			<sentence id="16:2">
+				<text>The only issue I have is the price.</text>
+			</sentence>
+			<sentence id="16:3">
+				<text>I can only afford I 77 doze bottle every 2 months.</text>
+			</sentence>
+		</sentences>
+		<Opinions>
+			<Opinion category="CONVENIENCE#USABILITY" polarity="Positive"></Opinion>
+			<Opinion category="PRICE#PRICE" polarity="Negative"></Opinion>
+		</Opinions>
+	</Review>

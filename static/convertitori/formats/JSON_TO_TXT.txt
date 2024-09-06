@@ -1,0 +1,32 @@
+Input:
+
+[
+    {
+        "text": "however , it ' s the service that leaves a bad taste in my mouth .",
+        "labels": [
+            {
+                "aspect": "service",
+                "opinion": "bad taste",
+                "polarity": "negative",
+                "category": "SERVICE#GENERAL"
+            }
+        ]
+    },
+    {
+        "text": "i had a great experience .",
+        "labels": [
+            {
+                "aspect": "NULL",
+                "opinion": "great",
+                "polarity": "positive",
+                "category": "RESTAURANT#GENERAL"
+            }
+        ]
+    }
+]
+
+
+Output:
+
+however , it ' s the service that leaves a bad taste in my mouth .####[('service', 'SERVICE#GENERAL', 'negative')]
+i had a great experience .####[('NULL', 'RESTAURANT#GENERAL', 'positive')]

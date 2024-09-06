@@ -1,0 +1,18 @@
+Input:
+
+
+
+Output:
+
+<sentence id="813">
+          <text>All the appetizers and salads were fabulous, the steak was mouth watering and the pasta was delicious!!!</text>
+          <aspectTerms>
+                    <aspectTerm term="appetizers" polarity="positive" from="8" to="18"/>
+                    <aspectTerm term="salads" polarity="positive" from="23" to="29"/>
+                    <aspectTerm term="steak" polarity="positive" from="49" to="54"/>
+                    <aspectTerm term="pasta" polarity="positive" from="82" to="87"/>
+          </aspectTerms>
+          <aspectCategories>
+                    <aspectCategory category="food" polarity="positive"/>
+          </aspectCategories>
+</sentence>

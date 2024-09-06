@@ -1,0 +1,54 @@
+Input:
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Reviews>
+    <Review rid="348">
+        <sentences>
+            <sentence id="348:0">
+                <text>Most everything is fine with this machine: speed, capacity, build.</text>
+            </sentence>
+            <sentence id="348:1">
+                <text>The only thing I don't understand is that the resolution of the screen isn't high enough for some pages, such as Yahoo!Mail.</text>
+            </sentence>
+            <sentence id="348:2">
+                <text>Yes, I have it on the highest available setting.</text>
+            </sentence>
+        </sentences>
+        <Opinions>
+            <Opinion category="LAPTOP#GENERAL" polarity="positive"/>
+            <Opinion category="LAPTOP#OPERATION_PERFORMANCE" polarity="positive"/>
+            <Opinion category="HARD_DISC#DESIGN_FEATURES" polarity="positive"/>
+            <Opinion category="LAPTOP#QUALITY" polarity="positive"/>
+            <Opinion category="DISPLAY#QUALITY" polarity="negative"/>
+        </Opinions>
+    </Review>
+
+Output:
+
+[
+    {
+        "text": "Most everything is fine with this machine: speed, capacity, build. The only thing I don't understand is that the resolution of the screen isn't high enough for some pages, such as Yahoo!Mail. Yes, I have it on the highest available setting.",
+        "labels": [
+            {
+                "polarity": "Positive",
+                "category": "LAPTOP#GENERAL"
+            },
+            {
+                "polarity": "Positive",
+                "category": "LAPTOP#OPERATION_PERFORMANCE"
+            },
+            {
+                "polarity": "Positive",
+                "category": "HARD_DISC#DESIGN_FEATURES"
+            },
+            {
+                "polarity": "Positive",
+                "category": "LAPTOP#QUALITY"
+            },
+            {
+                "polarity": "Negative",
+                "category": "DISPLAY#QUALITY"
+            }
+        ]
+    }
+]

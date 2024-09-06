@@ -1,0 +1,62 @@
+Input:
+
+[
+    {
+        "Unnamed: 0": 64286,
+        "Review_number": 19649,
+        "Sentence_number": 2,
+        "Sentence": "Good expiration date too!",
+        "Review": "You can't beat the price on this. You get a 1 year supply, and it's the same ingredients as the over-the-counter meds, which have a much higher price tag. Good expiration date too!",
+        "id": 364282,
+        "Category": "EXPIRATION#EXPIRATION_DATE",
+        "Sentiment": "Positive",
+        "annotator": 1,
+        "annotation_id": 1037,
+        "created_at": "2023-04-18T10:36:17.057841Z",
+        "updated_at": "2023-04-18T10:36:17.057867Z",
+        "lead_time": 3.24
+    },
+    {
+        "Unnamed: 0": 26750,
+        "Review_number": 8799,
+        "Sentence_number": 0,
+        "Sentence": "Always has a long expiration date",
+        "Review": "Always has a long expiration date",
+        "Unnamed: 5": "",
+        "Unnamed: 6": "",
+        "Unnamed: 7": "",
+        "id": 266747,
+        "Category": "EXPIRATION#EXPIRATION_DATE",
+        "Sentiment": "Positive",
+        "annotator": 1,
+        "annotation_id": 1028,
+        "created_at": "2023-04-18T10:34:33.826753Z",
+        "updated_at": "2023-04-18T10:34:33.826790Z",
+        "lead_time": 3.816
+    }
+]
+
+Output:
+
+<?xml version='1.0' encoding='UTF-8'?>
+<Reviews>
+	<Review rid="19649">
+		<sentences>
+			<sentence id="19649:2">
+				<text>Good expiration date too!</text>
+				<Opinions>
+					<Opinion category="EXPIRATION#EXPIRATION_DATE" polarity="Positive"></Opinion>
+				</Opinions>
+			</sentence>
+		</sentences>
+	</Review>
+	<Review rid="8799">
+		<sentences>
+			<sentence id="8799:0">
+				<text>Always has a long expiration date</text>
+				<Opinions>
+					<Opinion category="EXPIRATION#EXPIRATION_DATE" polarity="Positive"></Opinion>
+				</Opinions>
+			</sentence>
+		</sentences>
+	</Review>

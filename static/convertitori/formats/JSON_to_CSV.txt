@@ -1,0 +1,33 @@
+Input:
+
+[
+    {
+        "text": "judging from previous posts this used to be a good place , but not any longer .",
+        "labels": [
+            {
+                "aspect": "place",
+                "opinion": "not any longer",
+                "polarity": "negative",
+                "category": "RESTAURANT#GENERAL"
+            }
+        ]
+    },
+    {
+        "text": "we , there were four of us , arrived at noon - the place was empty - and the staff acted like we were imposing on them and they were very rude .",
+        "labels": [
+            {
+                "aspect": "staff",
+                "opinion": "rude",
+                "polarity": "negative",
+                "category": "SERVICE#GENERAL"
+            }
+        ]
+    }
+]
+
+
+Output:
+
+id,text,aspect,opinion,polarity,category
+1,judging from previous posts this used to be a good place , but not any longer .,place,not any longer,negative,RESTAURANT#GENERAL
+2,we , there were four of us , arrived at noon - the place was empty - and the staff acted like we were imposing on them and they were very rude .,staff,rude,negative,SERVICE#GENERAL

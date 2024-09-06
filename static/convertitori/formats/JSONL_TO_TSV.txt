@@ -1,0 +1,17 @@
+Input:
+
+[
+    {
+        "text": "service is top notch .",
+        "labels": [
+            {
+                "polarity": "positive",
+                "category": "SERVICE#GENERAL"
+            }
+        ]
+    }
+]
+
+Output:
+
+service is top notch .   SERVICE#GENERAL#1

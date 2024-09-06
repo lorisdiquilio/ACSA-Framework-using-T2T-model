@@ -1,0 +1,30 @@
+Input:
+
+[
+    {
+        "text": "service is top notch .",
+        "labels": [
+            {
+                "aspect": "service",
+                "opinion": "top notch",
+                "polarity": "positive",
+                "category": "SERVICE#GENERAL"
+            }
+        ]
+    }
+]
+
+Output:
+
+[
+    {
+        "text": "service is top notch .",
+        "labels": [
+            {
+                "aspect": "service",
+                "polarity": "positive",
+                "category": "SERVICE#GENERAL"
+            }
+        ]
+    }
+]

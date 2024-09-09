@@ -12,7 +12,6 @@ def json_to_csv(json_file_path, csv_file_path):
     data = []
     last_id = 0
 
-    # Controlla se il file CSV esiste e leggi i dati esistenti
     if os.path.exists(csv_file_path):
         with open(csv_file_path, 'r', newline='') as f:
             reader = csv.reader(f)
@@ -26,7 +25,6 @@ def json_to_csv(json_file_path, csv_file_path):
     else:
         print("No existing CSV file found, starting with last_id: 0")
 
-    # Leggi il file JSON
     with open(json_file_path, 'r', encoding='utf-8') as json_file:
         items = json.load(json_file)
         for item in items:
@@ -305,14 +303,12 @@ def convert_jsonl_to_tsv(jsonl_path, tsv_path):
             text = entry['text']
             labels = entry['labels']
 
-            # Creare una lista per tenere traccia delle annotazioni per la stessa frase
             annotations_list = []
 
             for label in labels:
                 category = label['category']
                 polarity = label['polarity']
 
-                # Mapping sentiment to 1 for Positive and -1 for Negative
                 if polarity == 'Positive':
                     sentiment = 1
                 elif polarity == 'Negative':
@@ -322,16 +318,14 @@ def convert_jsonl_to_tsv(jsonl_path, tsv_path):
                 elif polarity == 'Conflict':
                     sentiment = 2
 
-                # Creare una stringa per ogni annotazione
+                # creo una stringa per ogni annotazion
                 annotation_str = f'{category}#{sentiment}'
 
-                # Aggiungere la stringa alla lista di annotazioni
                 annotations_list.append(annotation_str)
 
-            # Unire le annotazioni in una stringa separata da tabulazioni
+            # unisco le stringhe (tabulazioni)
             annotations_combined = '\t'.join(annotations_list)
 
-            # Scrivere nel file TSV
             tsv_file.write(f'{text}\t{annotations_combined}\n')
 
 
@@ -406,30 +400,21 @@ def convert_xml14_to_json(xml_file, json_file):
     tree = ET.parse(xml_file)
     root = tree.getroot()
 
-    # Initialize the list to store the sentences
     sentences = []
 
-    # Iterate over each sentence in the XML
     for sentence in root.findall('sentence'):
-        # Get the text of the sentence
         text = sentence.find('text').text
 
-        # Initialize the list to store the labels
         labels = []
 
-        # Iterate over each aspectCategory in the sentence
         for aspectCategory in sentence.findall('aspectCategories/aspectCategory'):
-            # Get the polarity and category of the aspectCategory
             polarity = aspectCategory.get('polarity')
             category = aspectCategory.get('category')
 
-            # Add the label to the labels list
             labels.append({'polarity': polarity, 'category': category})
 
-        # Add the sentence to the sentences list
         sentences.append({'text': text, 'labels': labels})
 
-    # Write the sentences to the JSON file
     with open(json_file, 'w') as f:
         json.dump(sentences, f, indent=4)
 
@@ -437,36 +422,25 @@ def convert_xml14_to_json(xml_file, json_file):
 
 #questa funzione serve per passare dal formato SemEval2015 al JSONL utile per il nostro framework (ACSA)
 def convert_xml15_to_json(xml_file, json_file):
-    # Parse the XML file
     tree = ET.parse(xml_file)
     root = tree.getroot()
 
-    # Initialize the list to store the reviews
     reviews = []
 
-    # Iterate over each review in the XML
     for review in root.findall('Review'):
-        # Iterate over each sentence in the review
         for sentence in review.findall('sentences/sentence'):
-            # Get the text of the sentence
             text = sentence.find('text').text
 
-            # Initialize the list to store the labels
             labels = []
 
-            # Iterate over each opinion in the sentence
             for opinion in sentence.findall('Opinions/Opinion'):
-                # Get the polarity and category of the opinion
                 polarity = opinion.get('polarity')
                 category = opinion.get('category')
 
-                # Add the label to the labels list
                 labels.append({'polarity': polarity, 'category': category})
 
-            # Add the review to the reviews list
             reviews.append({'text': text, 'labels': labels})
 
-    # Write the reviews to the JSON file
     with open(json_file, 'w') as f:
         json.dump(reviews, f, indent=4)
 
@@ -474,38 +448,29 @@ def convert_xml15_to_json(xml_file, json_file):
 #questa funzione serve a trasformare i dati dal dataset SemEval2016 al JSONL utile per il nostro framework (ACSA)
 
 def convert_xml16_to_json(xml_file_path, json_file_path):
-    # Parse the XML file
     tree = ET.parse(xml_file_path)
     root = tree.getroot()
 
-    # Initialize an empty list to store the reviews
     reviews = []
 
-    # Iterate over each Review in the XML
     for review in root.findall('Review'):
-        # Initialize an empty string to store the review text
         review_text = ''
 
-        # Concatenate the text of each sentence in the review
         for sentence in review.find('sentences').findall('sentence'):
             review_text += sentence.find('text').text + ' '
 
-        # Initialize an empty list to store the labels
         labels = []
 
-        # Add each opinion as a label
         for opinion in review.find('Opinions').findall('Opinion'):
             labels.append({
                 'polarity': opinion.get('polarity').capitalize(),
                 'category': opinion.get('category')
             })
 
-        # Add the review to the list of reviews
         reviews.append({
             'text': review_text.strip(),
             'labels': labels
         })
 
-    # Save the list of reviews to a JSON file
     with open(json_file_path, 'w') as f:
         json.dump(reviews, f, ensure_ascii=False, indent=4)

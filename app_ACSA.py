@@ -18,22 +18,22 @@ Session(app)
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
-# per disabilitare l'uso della GPU per evitare problemi su sistemi senza GPU
+# to disable the GPU
 import torch
 torch.cuda.is_available = lambda: False
 
-# Carico il modello per le previsioni ABSA
+# Load the model
 generator = absa_instruction.ABSAGenerator(
-   checkpoint= "C:/Users/diquiliol/OneDrive - AptarGroup, Inc/Desktop/Aptar/AI - BA/Da portare in DOTTORATO/ACSA Framework/checkpoint-1440"
+   checkpoint= "./checkpoint-1440"
 )
 
-# Pagina principale con il menu di navigazione
+# main page
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
-# Funzioni disponibili
+# available function
 conversion_functions = {
     'JSON to CSV(ACOS)': json_to_csv,
     'CSV to TXT(ACSD)': convert_json_to_txt,
@@ -69,19 +69,18 @@ def data_converter():
     
     return render_template('data_converter.html', conversion_types=conversion_functions.keys())
 
-# Route per servire i file di formato
 @app.route('/formats/<path:filename>')
 def custom_static(filename):
     return send_from_directory('formats', filename)
 
-# Route per il caricamento dei file
+# load file
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         excel_file = request.files['excel_file']
         json_file = request.files.get('json_file')
 
-        # Salva i file caricati
+        # save the loaded files
         excel_file_path = os.path.join(app.config['UPLOAD_FOLDER'], excel_file.filename)
         excel_file.save(excel_file_path)
 
@@ -93,7 +92,7 @@ def upload_file():
             with open(json_file_path, 'r', encoding='utf-8') as f:
                 json_data = json.load(f)
 
-        # Salvo i dati nella sessione
+        # save the data of the session
         session['json_data'] = json_data
         session['filename'] = excel_file.filename
         session['json_file_path'] = json_file_path
@@ -103,7 +102,7 @@ def upload_file():
     return render_template('upload.html')
 
 
-# Route per l'annotazione manuale
+# manual annotation
 @app.route('/manual_annotation', methods=['GET', 'POST'])
 def manual_annotation():
     filename = session.get('filename')
@@ -127,17 +126,17 @@ def manual_annotation():
             if labels:
                 json_data.append({'text': text, 'labels': labels})
         
-        # Salva tutte le annotazioni (vecchie e nuove) nel file JSON originale
+        # save all annotation (old and new) in the original JSON
         json_file_path = session.get('json_file_path')
         if json_file_path:
             with open(json_file_path, 'w', encoding='utf-8') as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
         
-        return 'Annotazioni salvate con successo!'
+        return 'Annotations saved with success!'
     
     return render_template('manual_annotation.html', reviews=df.to_dict(orient='records'))
 
-# Route per l'annotazione semi-automatica
+# semi-automatic annotations
 @app.route('/semi_automatic_annotation', methods=['GET', 'POST'])
 def semi_automatic_annotation():
     filename = session.get('filename')
@@ -150,14 +149,14 @@ def semi_automatic_annotation():
             text = row['text']
             labels = []
 
-            # Raccolgo tutte le annotazioni per questo indice
+            # get all annotation for this index
             annotation_count = len([key for key in request.form.keys() if key.startswith(f'polarity_{index}_')])
             for i in range(annotation_count):
                 polarity_key = f'polarity_{index}_{i}'
                 category_key = f'category_{index}_{i}'
                 custom_category_key = f'custom_category_{index}_{i}'
 
-                # Recupero tutte le istanze delle chiavi per gestire le duplicazioni
+                # get all instances of keys to handle the duplicates
                 polarities = request.form.getlist(polarity_key)
                 categories = request.form.getlist(category_key)
                 custom_categories = request.form.getlist(custom_category_key)
@@ -170,13 +169,13 @@ def semi_automatic_annotation():
             if labels:
                 json_data.append({'text': text, 'labels': labels})
 
-        # Salvo tutte le annotazioni (vecchie e nuove) nel file JSON originale
+        # save the annotations (old and new) in the original JSON
         json_file_path = session.get('json_file_path')
         if json_file_path:
             with open(json_file_path, 'w', encoding='utf-8') as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
 
-        return 'Annotazioni salvate con successo!'
+        return 'Annotazioni saved with success!'
 
     return render_template('semi_automatic_annotation.html', reviews=df.to_dict(orient='records'))
 

@@ -9,6 +9,6 @@ This project aims to streamline the process of Aspect-Category Sentiment Analysi
 - Prediction Chart: Visualize sentiment trends for a list of reviews using a sentiment index created after the prevision of the model.
 
   
-Feel free to try the model trained on the new Beauty dataset through our demo available on Hugging Face: https://huggingface.co/spaces/lorisdq/pyacsa_2 
+Feel free to try the model trained on the new Beauty dataset through our demo available on Hugging Face: https://huggingface.co/spaces/lorisdq/PyACSA  
 If you find this project helpful, please consider giving it a star.
 

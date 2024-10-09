@@ -1793,6 +1793,10 @@
             {
                 "polarity": "Positive",
                 "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Positive",
+                "category": "General feel/effect"
             }
         ]
     },

@@ -5958,6 +5958,10 @@
         "labels": [
             {
                 "polarity": "Negative",
+                "category": "Texture/Thickness"
+            },
+            {
+                "polarity": "Negative",
                 "category": "Tone/Color"
             }
         ]

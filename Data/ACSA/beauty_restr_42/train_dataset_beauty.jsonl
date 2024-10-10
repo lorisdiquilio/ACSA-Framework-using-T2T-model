@@ -9906,6 +9906,10 @@
             {
                 "polarity": "Negative",
                 "category": "Tone/Color"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Texture/Thickness"
             }
         ]
     },

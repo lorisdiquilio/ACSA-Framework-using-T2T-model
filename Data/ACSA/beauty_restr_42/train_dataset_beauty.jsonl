@@ -6668,6 +6668,10 @@
             {
                 "polarity": "Negative",
                 "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Results"
             }
         ]
     },

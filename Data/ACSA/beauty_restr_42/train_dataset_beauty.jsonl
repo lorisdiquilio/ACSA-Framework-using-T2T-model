@@ -4417,6 +4417,14 @@
             {
                 "polarity": "Negative",
                 "category": "Price/Value"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Quantity"
+            },
+            {
+                "polarity": "Negative",
+                "category": "Results"
             }
         ]
     },

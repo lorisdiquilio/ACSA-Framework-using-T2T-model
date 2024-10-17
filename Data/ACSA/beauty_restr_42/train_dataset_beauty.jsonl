@@ -2900,10 +2900,6 @@
         "labels": [
             {
                 "polarity": "Positive",
-                "category": "General feel/effect"
-            },
-            {
-                "polarity": "Positive",
                 "category": "Skin/Hair Issue"
             }
         ]

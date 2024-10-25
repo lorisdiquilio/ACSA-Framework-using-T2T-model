@@ -10024,10 +10024,6 @@
         "labels": [
             {
                 "polarity": "Negative",
-                "category": "Packaging"
-            },
-            {
-                "polarity": "Negative",
                 "category": "Delivery/Customer Service"
             }
         ]

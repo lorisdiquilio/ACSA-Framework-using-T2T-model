@@ -12,3 +12,6 @@ This project aims to streamline the process of Aspect-Category Sentiment Analysi
 Feel free to try the model trained on the new Beauty dataset (see the categories in the [Beauty annotation guidelines](https://github.com/lorisdiquilio/ACSA-Framework-using-T2T-model/blob/main/Annotations%20Guidelines_beauty.docx)) through our demo available on Hugging Face: https://huggingface.co/spaces/lorisdq/PyACSA  
 If you find this project helpful, please consider giving it a star.
 
+## Acknowledgments
+
+This project is partially supported by the PNRR project FAIR –- Future AI Research (PE00000013), Spoke 9 -- Green-aware AI, under the NRRP MUR program funded by the NextGenerationEU.
